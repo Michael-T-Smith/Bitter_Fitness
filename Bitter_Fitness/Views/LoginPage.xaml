@@ -6,9 +6,18 @@
              mc:Ignorable="d"
              x:Class="Bitter_Fitness.Views.LoginPage"
              Shell.NavBarIsVisible="False">
+    <ContentPage.BackgroundImageSource>
+        <OnPlatform x:TypeArguments="ImageSource">
+            <On Platform="Android">BitterFitness_Logo.png</On>
+            <On Platform="iOS">BitterFitness_Logo.png</On>
+            <On Platform="UWP">Assets/BitterFitness_Logo.png</On>
+        </OnPlatform>
+    </ContentPage.BackgroundImageSource>
+
     <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
+        <StackLayout Padding="10,300,10,0" VerticalOptions="Center">
+            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}" />
+            <Button VerticalOptions="Center" Text="Signup" Command="{Binding SignupCommand}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

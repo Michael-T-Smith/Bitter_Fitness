@@ -1,6 +1,7 @@
 ﻿using Bitter_Fitness.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,17 +11,22 @@ using Xamarin.Forms.Xaml;
 namespace Bitter_Fitness.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class SignupPage : ContentPage
     {
-        public LoginPage()
+        public SignupPage()
+
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
         }
 
-        public void OnLoginButtonClicked()
+        public void OnSignUpClicked()
         {
             
+        }
+
+        private void signup_Clicked(object sender, EventArgs e)
+        {
+            Debug.WriteLine("Sign-up Btn Clicked!");
         }
     }
 }
