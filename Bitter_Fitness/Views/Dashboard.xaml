@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bitter_Fitness.Views.DashboardPage"
+             xmlns:vm="clr-namespace:Bitter_Fitness.ViewModels"
+             Title="{Binding Title}">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Banner -->
+    <StackLayout Grid.Row="0" BackgroundColor="#0000FF" Padding="16">
+        <Label Text="BitterFitness" FontSize="24" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" />
+    </StackLayout>
+
+        <!-- Fitness Model Dropdown -->
+        <Frame Grid.Row="1" BackgroundColor="LightGray" CornerRadius="10" Padding="16" Margin="16,16,0,0">
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Label Text="Fitness Model:" FontSize="20" TextColor="Black" VerticalOptions="Center" />
+                <Picker Title="Select Model">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Lean Machine</x:String>
+                            <x:String>Gym Rat</x:String>
+                            <x:String>In It to Get Fit</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
+        </Frame>
+
+        <!-- Content -->
+        <StackLayout Grid.Row="2" Padding="16">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Square 1 (Progress) -->
+                <Frame Grid.Row="3" Grid.Column="0" BackgroundColor="MediumBlue" CornerRadius="20" Padding="20" Margin="0,0,10,10">
+                    <StackLayout VerticalOptions="Center">
+                        <Label Text="Progress" FontSize="24" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" />
+                        <!-- Add additional labels or content here for relevant information -->
+                        <Image Source="https://thumbs.dreamstime.com/b/body-progress-weight-lifting-fitness-theme-illustration-69600550.jpg" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="48" WidthRequest="48" />
+                    </StackLayout>
+                </Frame>
+
+                <!-- Square 2 (Muscle Gain) -->
+                <Frame Grid.Row="3" Grid.Column="1" BackgroundColor="LightGreen" CornerRadius="20" Padding="20" Margin="10,0,0,10">
+                    <StackLayout VerticalOptions="Center">
+                        <Label Text="Muscle Gain" FontSize="20" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" />
+                        <!-- Add additional labels or content here for relevant information -->
+                        <Image Source= "https://clipground.com/images/dumbell-clipart-12.jpg" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="48" WidthRequest="48" />
+                    </StackLayout>
+                </Frame>
+
+                <!-- Square 3 (Exericises) -->
+                <Frame Grid.Row="4" Grid.Column="0" BackgroundColor="LightBlue" CornerRadius="20" Padding="20" Margin="0,10,10,0">
+                    <StackLayout VerticalOptions="Center">
+                        <Label Text="Exercises" FontSize="20" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" />
+                        <!-- Add additional labels or content here for relevant information -->
+                        <Image Source="weight_loss_icon.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="48" WidthRequest="48" />
+                    </StackLayout>
+                </Frame>
+
+                <!-- Square 4 Calories) -->
+                <Frame Grid.Row="4" Grid.Column="1" BackgroundColor="MediumVioletRed" CornerRadius="20" Padding="20" Margin="10,10,0,0">
+                    <StackLayout VerticalOptions="Center">
+                        <Label Text="Calories" FontSize="20" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" />
+                        <!-- Add additional labels or content here for relevant information -->
+                        <Image Source="https://clipartcraft.com/images/fire-emoji-transparent-old-6.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="48" WidthRequest="48" />
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
