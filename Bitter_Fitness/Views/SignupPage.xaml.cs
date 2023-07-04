@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 using Xamarin.Forms.Xaml;
 
 namespace Bitter_Fitness.Views
@@ -17,16 +18,7 @@ namespace Bitter_Fitness.Views
 
         {
             InitializeComponent();
-        }
-
-        public void OnSignUpClicked()
-        {
-            
-        }
-
-        private void signup_Clicked(object sender, EventArgs e)
-        {
-            Debug.WriteLine("Sign-up Btn Clicked!");
+            this.BindingContext = new SignupViewModel();
         }
     }
 }

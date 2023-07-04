@@ -2,22 +2,28 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:local="clr-namespace:Bitter_Fitness.ViewModels"
              mc:Ignorable="d"
              x:Class="Bitter_Fitness.Views.LoginPage"
              Shell.NavBarIsVisible="False">
-    <ContentPage.BackgroundImageSource>
-        <OnPlatform x:TypeArguments="ImageSource">
-            <On Platform="Android">BitterFitness_Logo.png</On>
-            <On Platform="iOS">BitterFitness_Logo.png</On>
-            <On Platform="UWP">Assets/BitterFitness_Logo.png</On>
-        </OnPlatform>
-    </ContentPage.BackgroundImageSource>
-
-    <ContentPage.Content>
-        <StackLayout Padding="10,300,10,0" VerticalOptions="Center">
-            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}" />
-            <Button VerticalOptions="Center" Text="Signup" Command="{Binding SignupCommand}" />
+ <ContentPage.BackgroundImageSource>
+  <OnPlatform x:TypeArguments="ImageSource">
+    <On Platform="Android">BitterFitness_Logo2.png</On>
+    <On Platform="iOS">BitterFitness_Logo2.png</On>
+    <On Platform="UWP">Assets/BitterFitness_Logo2.png</On>
+    </OnPlatform>
+ </ContentPage.BackgroundImageSource>
+    <ContentPage.BindingContext>
+        <local:LoginViewModel />
+    </ContentPage.BindingContext>
+ <ContentPage.Content>
+        <StackLayout Spacing="20" Margin="0,225,0,0">
+            <Entry Placeholder="Email" Keyboard="Email" Margin="0,20,0,0" TextColor="white" PlaceholderColor="White" Text="{Binding EnteredUserEmail}"/>
+            <Entry Placeholder="Password" IsPassword="True" Margin="0,20,0,0" TextColor="white" PlaceholderColor="White" Text="{Binding EnteredUserPassword}"/>
+            <Button Text="Login" CornerRadius="180" BorderColor="Cyan" BorderWidth="1" Margin="50,55,50,10" Command="{Binding LoginCommand}"/>
+            <Label x:Name="errorLabel" Text="{Binding ErrorMessage}" IsVisible="true" VerticalOptions="StartAndExpand" TextColor="Red" Margin="50,0,50,100" HorizontalTextAlignment="Center"/>
+            <Button Text="Back"  CornerRadius="180" BorderColor="Cyan" BorderWidth="1" Margin="50,10,50,150" Command="{Binding BackCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

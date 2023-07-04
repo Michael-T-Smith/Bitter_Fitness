@@ -30,9 +30,11 @@
     </Shell.Resources>
 
     <TabBar>
+        <ShellContent Route="LandingPage" ContentTemplate="{DataTemplate local:LandingPage}" />
+    </TabBar>
+    <TabBar>
         <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
     </TabBar>
-
     <TabBar>
         <ShellContent Route="SignupPage" ContentTemplate="{DataTemplate local:SignupPage}" />
     </TabBar>
