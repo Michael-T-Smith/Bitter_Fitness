@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:local="clr-namespace:Bitter_Fitness.ViewModels"
+             mc:Ignorable="d"
+             x:Class="Bitter_Fitness.Views.SignupPage"
+             Shell.NavBarIsVisible="False">
+ <ContentPage.BackgroundImageSource>
+  <OnPlatform x:TypeArguments="ImageSource">
+    <On Platform="Android">BitterFitness_Logo2.png</On>
+    <On Platform="iOS">BitterFitness_Logo2.png</On>
+    <On Platform="UWP">Assets/BitterFitness_Logo2.png</On>
+    </OnPlatform>
+    </ContentPage.BackgroundImageSource>
+    <ContentPage.BindingContext>
+        <local:SignupViewModel />
+    </ContentPage.BindingContext>
+ <ContentPage.Content>
+        <StackLayout Spacing="20" Margin="0,225,0,0">
+            <Entry x:Name="userName" Placeholder="Name" Keyboard="Text" Margin="0,20,0,0" TextColor="white" PlaceholderColor="White" Text="{Binding UserName}" />
+            <Entry x:Name="userEmail" Placeholder="Email" Keyboard="Email" Margin="0,20,0,0" TextColor="white" PlaceholderColor="White" Text="{Binding UserEmail}" />
+            <Entry x:Name="userPassword" Placeholder="Password" IsPassword="True" Margin="0,20,0,0" TextColor="white" PlaceholderColor="White" Text="{Binding UserPassword}" />
+            <Button Text="Sign Up" Margin="50,10,50,80" Command="{Binding OnSignupClick}" CornerRadius="180" BorderColor="Cyan" BorderWidth="1" />
+
+            <Label Text="Already have an account?" HorizontalOptions="Center" TextColor="white" />
+            <Button Text="Log In"  CornerRadius="180" BorderColor="Cyan" BorderWidth="1" Margin="50,0,50,150" Command="{Binding OnLoginClick}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
