@@ -16,9 +16,9 @@
     <Compile Update="Views\Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Settings.xaml.cs">
-      <DependentUpon>Settings.xaml</DependentUpon>
-
+	  <Compile Update="Views\Settings.xaml.cs">
+		  <DependentUpon>Settings.xaml</DependentUpon>
+	  </Compile>
     <Compile Update="Views\LandingPage.xaml.cs">
       <DependentUpon>LandingPage.xaml</DependentUpon>
     </Compile>
