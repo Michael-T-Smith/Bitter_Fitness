@@ -12,6 +12,13 @@
   </ItemGroup>
 
   <ItemGroup>
+
+    <Compile Update="Views\Dashboard.xaml.cs">
+      <DependentUpon>Dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+
     <Compile Update="Views\LandingPage.xaml.cs">
       <DependentUpon>LandingPage.xaml</DependentUpon>
     </Compile>
@@ -20,6 +27,7 @@
     </Compile>
     <Compile Update="Views\SignupPage.xaml.cs">
       <DependentUpon>SignupPage.xaml</DependentUpon>
+
     </Compile>
   </ItemGroup>
 </Project>
