@@ -13,6 +13,9 @@ namespace Bitter_Fitness
             InitializeComponent();
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            Routing.RegisterRoute("LandingPage", typeof(LandingPage));
+            Routing.RegisterRoute("SignupPage", typeof(SignupPage));
+            Routing.RegisterRoute("LoginPage", typeof(LoginPage));
         }
 
     }
