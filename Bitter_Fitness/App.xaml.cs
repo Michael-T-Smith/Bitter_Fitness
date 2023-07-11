@@ -13,7 +13,7 @@ namespace Bitter_Fitness
 
         private static Database database;
 
-        /* Maintains one database connection.*/
+        /* Creates and maintains one database connection.*/
         /* Change Environment Special Folder path to desired location for storing database file(s).*/
         /* Reference https://youtu.be/uxqQqyuZ3Qo?t=600 for more implementation details */
         public static Database Database
