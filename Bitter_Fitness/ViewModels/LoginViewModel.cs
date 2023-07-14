@@ -50,7 +50,7 @@ namespace Bitter_Fitness.ViewModels
             set { enteredPassword = value; }
         }
 
-        private void LoginClicked(object obj)
+        private async void LoginClicked(object obj)
         {
 
             if (!string.IsNullOrEmpty(enteredEmail) && !string.IsNullOrEmpty(enteredPassword))

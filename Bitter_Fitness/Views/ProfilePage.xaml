@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bitter_Fitness.Views.ProfilePage">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <!-- User Information Section -->
+            <StackLayout Margin="0,0,0,20">
+                <Label Text="User Information"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" />
+
+                <StackLayout>
+                    <Label Text="Name:" />
+                    <Entry Placeholder="Enter your name" />
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="Goal:" />
+                    <Entry Placeholder="Enter your goal" />
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="Height:" />
+                    <Entry Placeholder="Enter your height" />
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="Weight:" />
+                    <Entry Placeholder="Enter your weight" />
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="Expected Workout Days:" />
+                    <Entry Placeholder="Enter expected workout days" />
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Inspirational Message Section -->
+            <StackLayout BackgroundColor="#F8F8F8" Padding="10" VerticalOptions="CenterAndExpand">
+                <Label Text="Why did the Chicken Cross the Road?"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center" />
+
+                <Label x:Name="InspirationalMessageLabel"
+                       Text=""
+                       FontSize="16"
+                       TextColor="#333333"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+
+                <Button x:Name="GenerateMessageButton"
+                        Text="Inspirational Message"
+                        FontSize="16"
+                        BackgroundColor="#007BFF"
+                        TextColor="White"
+                        HorizontalOptions="Center"
+                        Margin="0,10,0,0"
+                       Clicked="GenerateMessageButton_Clicked" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

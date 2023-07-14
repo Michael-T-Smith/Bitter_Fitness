@@ -1,0 +1,44 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bitter_Fitness.Views.ProgressPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="20">
+            <Label Text="Progress Tracking Chart"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="Black" />
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Label Text="Workouts Completed:"
+                       FontSize="16"
+                       VerticalOptions="Center"
+                       TextColor="Black" />
+
+                <Entry x:Name="WorkoutsCompletedEntry"
+                       Placeholder="Enter workouts completed"
+                       FontSize="16"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="Center"
+                       Keyboard="Numeric"/>
+                <!--TextChanged="Entry_TextChanged" />-->
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Label Text="Workout Goal:"
+                       FontSize="16"
+                       VerticalOptions="Center"
+                       TextColor="Black" />
+
+                <Entry x:Name="WorkoutGoalEntry"
+                       Placeholder="Enter workout goal"
+                       FontSize="16"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="Center"
+                       Keyboard="Numeric"/>
+                <!--TextChanged="Entry_TextChanged" />-->
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

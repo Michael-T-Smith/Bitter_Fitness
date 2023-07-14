@@ -48,9 +48,9 @@
                 <!-- Square 1 (Progress) -->
                 <Frame Grid.Row="3" Grid.Column="0" BackgroundColor="MediumBlue" CornerRadius="20" Padding="20" Margin="0,0,10,10">
                     <StackLayout VerticalOptions="Center">
-                        <Label Text="Progress" FontSize="24" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" />
+                        <Label Text="Progress" FontSize="22" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" />
                         <!-- Add additional labels or content here for relevant information -->
-                        <Image Source="https://thumbs.dreamstime.com/b/body-progress-weight-lifting-fitness-theme-illustration-69600550.jpg" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="48" WidthRequest="48" />
+                        <Image Source="https://thumbs.dreamstime.com/b/body-progress-weight-lifting-fitness-theme-illustration-69600550.jpg" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" HeightRequest="36" WidthRequest="36" />
                     </StackLayout>
                 </Frame>
 
