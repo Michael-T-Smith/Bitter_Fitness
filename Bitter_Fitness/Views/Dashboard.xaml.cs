@@ -5,9 +5,9 @@ using Xamarin.Forms.Xaml;
 
 namespace Bitter_Fitness.Views
 {
-    public partial class AboutPage : ContentPage
+    public partial class DashboardPage : ContentPage
     {
-        public AboutPage()
+        public DashboardPage()
         {
             InitializeComponent();
         }

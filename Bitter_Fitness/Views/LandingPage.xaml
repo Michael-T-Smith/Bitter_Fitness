@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Bitter_Fitness.Views.LandingPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.BackgroundImageSource>
+        <OnPlatform x:TypeArguments="ImageSource">
+            <On Platform="Android">BitterFitness_Logo.png</On>
+            <On Platform="iOS">BitterFitness_Logo.png</On>
+            <On Platform="UWP">Assets/BitterFitness_Logo.png</On>
+        </OnPlatform>
+    </ContentPage.BackgroundImageSource>
+    <ContentPage.Content>
+        <StackLayout Padding="10,350,10,0" VerticalOptions="Center">
+            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}" CornerRadius="180" BorderColor="Cyan" BorderWidth="1" Margin="50,100,50,50"/>
+            <Button VerticalOptions="Center" Text="Signup" Command="{Binding SignupCommand}" CornerRadius="180" BorderColor="Cyan" BorderWidth="1" Margin="50,10,50,150"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
